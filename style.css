@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  font-family: monospace;
+  background: black;
+  color: white;
+  overflow: hidden;
+}
+
+.storm-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('https://i.imgur.com/zl13Kj7.gif') center/cover no-repeat;
+  opacity: 0.15;
+  z-index: -1;
+  animation: flicker 5s infinite;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.25; }
+}
+
+.content {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.glow-title {
+  font-size: 3em;
+  text-shadow: 0 0 10px cyan, 0 0 30px blue, 0 0 50px pink;
+  margin-bottom: 40px;
+}
+
+.button-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.link-button {
+  background: linear-gradient(45deg, #0ff, #00f, #f0f);
+  padding: 15px 30px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,255,255,0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.link-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255,255,255,0.7);
+}
