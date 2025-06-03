@@ -2,85 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>⚡ Cosmic Storm Hub ⚡</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: monospace;
-      background: radial-gradient(ellipse at bottom, #020111 0%, #000000 100%);
-      overflow: hidden;
-      color: white;
-      text-align: center;
-    }
-
-    .storm-title {
-      font-size: 3em;
-      margin-top: 2rem;
-      color: cyan;
-      text-shadow: 0 0 10px cyan, 0 0 20px blue, 0 0 40px hotpink;
-      animation: glowPulse 2s infinite alternate;
-    }
-
-    @keyframes glowPulse {
-      from { text-shadow: 0 0 5px cyan, 0 0 10px blue; }
-      to { text-shadow: 0 0 20px cyan, 0 0 40px hotpink; }
-    }
-
-    .button-group {
-      margin-top: 3rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .glow-button {
-      background: none;
-      border: 2px solid cyan;
-      color: white;
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-      text-transform: uppercase;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      display: inline-block;
-      box-shadow: 0 0 10px cyan, 0 0 20px blue;
-    }
-
-    .glow-button:hover {
-      background: cyan;
-      color: black;
-      box-shadow: 0 0 20px hotpink, 0 0 40px blue;
-    }
-
-    .background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      background: url('https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif') center center / cover no-repeat;
-      opacity: 0.1;
-      z-index: -1;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DVaBoi's Cosmic Hub</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="background"></div>
-
-  <h1 class="storm-title">🔥 Cosmic Link Hub 🔥</h1>
-
-  <div class="button-group">
-    <a class="glow-button" href="https://kick.com" target="_blank">Kick</a>
-    <a class="glow-button" href="https://twitch.tv" target="_blank">Twitch</a>
-    <a class="glow-button" href="https://github.com" target="_blank">GitHub</a>
-    <a class="glow-button" href="https://youtube.com" target="_blank">YouTube</a>
-    <a class="glow-button" href="https://yourcustomsite.com" target="_blank">Your Site</a>
-  </div>
+  <div class="storm-overlay"></div>
+  <main class="content">
+    <h1 class="glow-title">🌌 DVaBoi's Cosmic Links 🌌</h1>
+    <div class="button-grid">
+      <a href="https://kick.com/dvaboi" class="link-button">🎥 Kick Stream</a>
+      <a href="https://dvaboi.github.io/mysite/" class="link-button">🌐 This Site</a>
+      <a href="https://github.com/DVaBoi" class="link-button">💻 GitHub</a>
+      <a href="https://discord.com" class="link-button">💬 Discord</a>
+      <a href="https://youtube.com" class="link-button">📺 YouTube</a>
+    </div>
+  </main>
 </body>
 </html>
+
