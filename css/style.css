@@ -11,7 +11,7 @@ body {
 header {
   background-color: #1f1f1f;
   padding: 15px 20px;
-  border-bottom: 2px solid #e91e63; /* pink accent */
+  border-bottom: 2px solid #e91e63;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,7 +25,7 @@ header h1 {
 }
 
 nav a {
-  color: #64b5f6; /* blue links */
+  color: #64b5f6;
   margin-left: 20px;
   text-decoration: none;
   font-weight: 600;
@@ -34,8 +34,14 @@ nav a {
 
 nav a:hover,
 nav a:focus {
-  color: #e91e63; /* pink hover */
+  color: #e91e63;
   text-decoration: underline;
+}
+
+nav a.active {
+  color: #e91e63;
+  text-decoration: underline;
+  font-weight: 700;
 }
 
 main {
@@ -55,10 +61,28 @@ main {
   color: #ccc;
 }
 
-.intro p {
+.intro p,
+.content p {
   font-size: 1.1rem;
   line-height: 1.6;
   color: #aaa;
+}
+
+.content ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: #aaa;
+}
+
+.content ul li a {
+  color: #64b5f6;
+  text-decoration: none;
+}
+
+.content ul li a:hover,
+.content ul li a:focus {
+  color: #e91e63;
+  text-decoration: underline;
 }
 
 footer {
@@ -69,3 +93,4 @@ footer {
   border-top: 1px solid #333;
   padding-top: 10px;
 }
+
