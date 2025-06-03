@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | DS Game Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Games - DS Game Studio</title>
+  <base href="/mysite/" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -12,19 +13,22 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="games.html">Games</a>
+      <a href="games.html" class="active">Games</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <h2>Meet the Engineers</h2>
+      <h2>Our Games</h2>
     </section>
-    <section class="intro">
-      <p><strong>MiskOmega 🔵</strong> is a computer engineer, AI developer, and systems architect specializing in intelligent logic design and backend code infrastructure.</p>
-      <p><strong>DVaBoi 💖</strong> is an AI engineer, game designer, and digital artist focused on expressive storytelling, UI/UX, and dynamic interactive experiences.</p>
-      <p>Together, we form <strong>DS Game Studio</strong> — building games, tools, and art that fuse neural logic with cosmic creativity.</p>
+    <section class="content">
+      <p>Below are some of our projects. Click to launch them:</p>
+      <ul>
+        <li><a href="pygames/spacewar/index.html" target="_blank" rel="noopener">Spacewar! (Pygame)</a></li>
+        <li><a href="pygames/snake/index.html" target="_blank" rel="noopener">Snake (Pygame)</a></li>
+        <!-- Add more game links here -->
+      </ul>
     </section>
   </main>
 
@@ -33,3 +37,4 @@
   </footer>
 </body>
 </html>
+
