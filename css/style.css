@@ -1,34 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DS Game Studio</title>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-  <header>
-    <h1>DS Game Studio</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="games.html">Games</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+/* css/style.css */
 
-  <main>
-    <section class="hero">
-      <h2>Welcome to DS Game Studio</h2>
-      <p>Engineered by <strong>MiskOmega</strong> & <strong>DVaBoi</strong></p>
-    </section>
-    <section class="intro">
-      <p>We build AI-powered games, interactive experiences, and tools that bridge creativity and code.</p>
-    </section>
-  </main>
+body {
+  background-color: #121212;
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
 
-  <footer>
-    <p>&copy; 2025 DS Game Studio</p>
-  </footer>
-</body>
-</html>
+header {
+  background-color: #1f1f1f;
+  padding: 15px 20px;
+  border-bottom: 2px solid #e91e63; /* pink accent */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  color: #e91e63;
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+nav a {
+  color: #64b5f6; /* blue links */
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #e91e63; /* pink hover */
+  text-decoration: underline;
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ccc;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #aaa;
+}
+
+footer {
+  text-align: center;
+  margin: 60px 0 20px;
+  font-size: 0.9rem;
+  color: #555;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+}
