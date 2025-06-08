@@ -1,1 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MiskOmega | Minimalist 18+ Verification</title>
+<style>
+  body {
+    margin: 0; padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  header {
+    text-align: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid #444;
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #00ccff;
+  }
+  header p {
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+    color: #aaa;
+  }
+  main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  a.link-button {
+    display: block;
+    padding: 1rem;
+    background: #222;
+    color: #00ccff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    cursor: pointer;
+  }
+  a.link-button:hover {
+    background: #00ccff;
+    color: #121212;
+  }
+  footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.85rem;
+    color: #555;
+    border-top: 1px solid #444;
+  }
 
+  /* Age Verification Overlay */
+  #age-verification {
+    position: fixed;
+    inset: 0;
+    background: rgba(18,18,18,0.95);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+    padding: 2rem;
+    z-index: 9999;
+    text-align: center;
+  }
+  #age-verification h2 {
+    margin: 0 0 1rem;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #00ccff;
+  }
+  #age-verification p {
+    margin: 0 0 2rem;
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+  #age-verification button {
+    padding: 0.8rem 2rem;
+    margin: 0 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  #age-yes {
+    background: #00ccff;
+    color: #121212;
+  }
+  #age-yes:hover {
+    background: #00a6cc;
+  }
+  #age-no {
+    background: #444;
+    color: #eee;
+  }
+  #age-no:hover {
+    background: #666;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>MiskOmega</h1>
+  <p>Minimalist 18+ Verification</p>
+</header>
+
+<main>
+  <a href="https://github.com/miskomega" target="_blank" class="link-button">💻 Projects</a>
+  <a href="https://youtube.com/@miskomega" target="_blank" class="link-button">📺 YouTube</a>
+  <a href="https://kick.com/miskomega" target="_blank" class="link-button">🎥 Livestream</a>
+  <a href="https://game.example.com/1" target="_blank" class="link-button">🕹️ Game 1</a>
+  <a href="#" data-adult-url="https://example.com/adult1" class="link-button adult-link">🔞 Adult Gallery</a>
+</main>
+
+<footer>
+  © 2025 MiskOmega. All rights reserved.
+</footer>
+
+<!-- AGE VERIFICATION OVERLAY -->
+<div id="age-verification" role="dialog" aria-modal="true" aria-labelledby="age-title" aria-describedby="age-desc">
+  <h2 id="age-title">🔞 Adults Only</h2>
+  <p id="age-desc">This content is for 18 years or older.<br>Are you 18 or older?</p>
+  <div>
+    <button id="age-yes">Yes, take me in</button>
+    <button id="age-no">No, take me back</button>
+  </div>
+</div>
+
+<script>
+  const adultLinks = document.querySelectorAll('.adult-link');
+  const ageOverlay = document.getElementById('age-verification');
+  const yesBtn = document.getElementById('age-yes');
+  const noBtn = document.getElementById('age-no');
+  let redirectUrl = '';
+
+  adultLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      redirectUrl = e.currentTarget.getAttribute('data-adult-url');
+      ageOverlay.style.display = 'flex';
+    });
+  });
+
+  yesBtn.addEventListener('click', () => {
+    if (redirectUrl) {
+      window.open(redirectUrl, '_blank', 'noopener,noreferrer');
+      ageOverlay.style.display = 'none';
+      redirectUrl = '';
+    }
+  });
+
+  noBtn.addEventListener('click', () => {
+    ageOverlay.style.display = 'none';
+    redirectUrl = '';
+  });
+</script>
+
+</body>
+</html>
