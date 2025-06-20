@@ -62,63 +62,13 @@
     color: #555;
     border-top: 1px solid #444;
   }
-
-  /* Age Verification Overlay */
-  #age-verification {
-    position: fixed;
-    inset: 0;
-    background: rgba(18,18,18,0.95);
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #eee;
-    padding: 2rem;
-    z-index: 9999;
-    text-align: center;
-  }
-  #age-verification h2 {
-    margin: 0 0 1rem;
-    font-weight: 700;
-    font-size: 2rem;
-    color: #00ccff;
-  }
-  #age-verification p {
-    margin: 0 0 2rem;
-    font-size: 1.1rem;
-    line-height: 1.4;
-  }
-  #age-verification button {
-    padding: 0.8rem 2rem;
-    margin: 0 1rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 6px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  #age-yes {
-    background: #00ccff;
-    color: #121212;
-  }
-  #age-yes:hover {
-    background: #00a6cc;
-  }
-  #age-no {
-    background: #444;
-    color: #eee;
-  }
-  #age-no:hover {
-    background: #666;
-  }
 </style>
 </head>
 <body>
 
 <header>
   <h1>MiskOmega & DVaBoi</h1>
-  <p>Computer Engineer - Femboy Model</p>
+  <p>Game Director - Femboy Model</p>
 </header>
 
 <main>
@@ -126,51 +76,20 @@
   <a href="https://www.amazon.ca/hz/wishlist/ls/24Z9CIGH22TSH?ref_=wl_share" target="_blank" class="link-button">🛒 Buy Me Food!</a>
   <a href="https://kick.com/dvaboi" target="_blank" class="link-button">💚 Live on Kick! 24-7!</a>
   <a href="https://www.miskomega.com/projects" target="_blank" class="link-button">💻 Projects</a>
-  <a href="#" data-adult-url="https://www.miskomega.com/dvaboi" class="link-button adult-link">🔞 DVaBoi Femboy Model</a>
+  <a href="https://www.miskomega.com/dvaboi" target="_blank" class="link-button">💻 DVaBoi Links</a>
+  <a href="https://www.miskomega.com/miskomega" target="_blank" class="link-button">💻 MiskOmega Links</a>
 </main>
 
-<footer>
+<footer style="
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: #888;
+  background-color: #111;
+  border-top: 1px solid #444;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+">
   © 2025 — MiskOmega // DVaBoi — All rights reserved.
 </footer>
-
-<!-- AGE VERIFICATION OVERLAY -->
-<div id="age-verification" role="dialog" aria-modal="true" aria-labelledby="age-title" aria-describedby="age-desc">
-  <h2 id="age-title">🔞 Adults Only</h2>
-  <p id="age-desc">This content is for 18 years or older.<br>Are you 18 or older?</p>
-  <div>
-    <button id="age-yes">Yes, take me in</button>
-    <button id="age-no">No, take me back</button>
-  </div>
-</div>
-
-<script>
-  const adultLinks = document.querySelectorAll('.adult-link');
-  const ageOverlay = document.getElementById('age-verification');
-  const yesBtn = document.getElementById('age-yes');
-  const noBtn = document.getElementById('age-no');
-  let redirectUrl = '';
-
-  adultLinks.forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      redirectUrl = e.currentTarget.getAttribute('data-adult-url');
-      ageOverlay.style.display = 'flex';
-    });
-  });
-
-  yesBtn.addEventListener('click', () => {
-    if (redirectUrl) {
-      window.open(redirectUrl, '_blank', 'noopener,noreferrer');
-      ageOverlay.style.display = 'none';
-      redirectUrl = '';
-    }
-  });
-
-  noBtn.addEventListener('click', () => {
-    ageOverlay.style.display = 'none';
-    redirectUrl = '';
-  });
-</script>
-
 </body>
 </html>
